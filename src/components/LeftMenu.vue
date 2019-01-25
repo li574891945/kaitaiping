@@ -19,10 +19,16 @@
                          <span slot="title">首页</span>
                      </el-menu-item>
                  </router-link>
-                 <router-link to="/province">
-                     <el-menu-item index="9">
+                 <!--<router-link to="/province">-->
+                     <!--<el-menu-item index="9">-->
+                         <!--&lt;!&ndash;<i class="fa fa-margin fa-server"></i>&ndash;&gt;-->
+                         <!--<span slot="title">省</span>-->
+                     <!--</el-menu-item>-->
+                 <!--</router-link>-->
+                 <router-link to="/city">
+                     <el-menu-item index="10">
                          <!--<i class="fa fa-margin fa-server"></i>-->
-                         <span slot="title">省</span>
+                         <span slot="title">市</span>
                      </el-menu-item>
                  </router-link>
                 <router-link to="/wagesAndAttendance">

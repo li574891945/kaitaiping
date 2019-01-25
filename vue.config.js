@@ -4,7 +4,7 @@ const url = 'http://192.168.40.1:8081';
 
 
 module.exports = {
-    baseUrl: './', // 根域上下文目录
+    publicPath: './', // 根域上下文目录
     outputDir: 'dist', // 构建输出目录
     assetsDir: 'assets', // 静态资源目录 (data, css, img, fonts)
     lintOnSave: false, // 是否开启eslint保存检测，有效值：ture | false | 'error'

@@ -16,6 +16,7 @@ import Output from './views/map/output'
 import Wave from './views/map/wave'
 import Map from './views/map/map'
 import Province from './views/map/province'
+import City from './views/map/city'
 
 Vue.use(Router)
 
@@ -44,7 +45,8 @@ const router = new Router({
         { path: '/output', name: 'output', component: Output },
         { path: '/wave', name: 'wave', component: Wave },
         { path: '/map', name: 'map', component: Map },
-        { path: '/province', name: 'province', component: Province }
+        { path: '/province', name: 'province', component: Province },
+        { path: '/city', name: 'city', component: City }
       ]
     },
 
