@@ -202,7 +202,7 @@ export default {
   methods: {
     getProfile() {
       // 获取表格数据
-      this.$axios.get("http://192.168.40.1:8081/data/list.json").then(res => {
+      this.$axios.get("./data/list.json").then(res => {
         // this.tableData = res.data;
         this.allTableData = res.data.data;
         this.filterTableData = res.data.data;
