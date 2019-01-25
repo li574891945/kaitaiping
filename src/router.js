@@ -33,8 +33,8 @@ const router = new Router({
       name: 'index',
       component: Index,
       children: [
-        { path: '', component: Home },
-        { path: '/home', name: 'home', component: Home },
+        { path: '', component: Map },
+        { path: '/map', name: 'map', component: Map },
         { path: '/infoshow', name: 'infoshow', component: InfoShow },
         { path: '/foundlist', name: 'foundlist', component: FoundList },
         { path: '/wel', name: 'wel', component: Wel },
@@ -44,7 +44,6 @@ const router = new Router({
         { path: '/age', name: 'age', component: Age },
         { path: '/output', name: 'output', component: Output },
         { path: '/wave', name: 'wave', component: Wave },
-        { path: '/map', name: 'map', component: Map },
         { path: '/province', name: 'province', component: Province },
         { path: '/city', name: 'city', component: City }
       ]

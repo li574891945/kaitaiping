@@ -55,13 +55,20 @@
                     series: [{
                         type: 'map',
                         map: '江门市' ,//要和echarts.registerMap（）中第一个参数一致
-
-                        label: {
+                        itemStyle: {
                             normal: {
-                                show: true
+                                label: {
+                                    show: true,
+                                }
                             },
-                            emphasis: {
-                                show: true
+                            emphasis: {// 也是选中样式
+                                areaColor: '#76A4D4',
+                                label: {
+                                    show: true,
+                                    textStyle: {
+                                        color: '#fff'
+                                    }
+                                }
                             }
                         },
                         data : [
