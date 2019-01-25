@@ -18,6 +18,7 @@ import Map from './views/map/map'
 import Province from './views/map/province'
 import City from './views/map/city'
 
+const paths = '/kaitaiping/dist/';
 Vue.use(Router)
 
 const router = new Router({
@@ -25,27 +26,27 @@ const router = new Router({
   base: process.env.BASE_URL,
   routes: [
     { path: '*', name: '/404', component: Nofind },
-    { path: '/', redirect: '/index' },
-    { path: '/register', name: 'register', component: Register },
-    { path: '/login', name: 'login', component: Login },
+    { path: paths, redirect: '/index' },
+    { path: paths + '/register', name: 'register', component: Register },
+    { path: paths + '/login', name: 'login', component: Login },
     {
-      path: '/index',
+      path: paths + '/index',
       name: 'index',
       component: Index,
       children: [
-        { path: '', component: Map },
-        { path: '/map', name: 'map', component: Map },
-        { path: '/infoshow', name: 'infoshow', component: InfoShow },
-        { path: '/foundlist', name: 'foundlist', component: FoundList },
-        { path: '/wel', name: 'wel', component: Wel },
-        { path: '/wagesAndAttendance', name: 'wagesAndAttendance', component: WagesAndAttendance },
-        { path: '/attendance', name: 'attendance', component: Attendance },
-        { path: '/nativePlace', name: 'nativePlace', component: NativePlace },
-        { path: '/age', name: 'age', component: Age },
-        { path: '/output', name: 'output', component: Output },
-        { path: '/wave', name: 'wave', component: Wave },
-        { path: '/province', name: 'province', component: Province },
-        { path: '/city', name: 'city', component: City }
+        { path: paths, component: Map },
+        { path: paths + '/map', name: 'map', component: Map },
+        { path: paths +'/infoshow', name: 'infoshow', component: InfoShow },
+        { path: paths +'/foundlist', name: 'foundlist', component: FoundList },
+        { path: paths +'/wel', name: 'wel', component: Wel },
+        { path: paths +'/wagesAndAttendance', name: 'wagesAndAttendance', component: WagesAndAttendance },
+        { path: paths +'/attendance', name: 'attendance', component: Attendance },
+        { path: paths +'/nativePlace', name: 'nativePlace', component: NativePlace },
+        { path: paths +'/age', name: 'age', component: Age },
+        { path: paths +'/output', name: 'output', component: Output },
+        { path: paths +'/wave', name: 'wave', component: Wave },
+        { path: paths +'/province', name: 'province', component: Province },
+        { path: paths +'/city', name: 'city', component: City }
       ]
     },
 
