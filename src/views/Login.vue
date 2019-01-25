@@ -54,8 +54,6 @@ export default {
         if (valid) {
           // this.$axios.post("/api/users/login", this.loginUser).then(res => {
             // 登录成功
-
-
             const  token  =  {
                 "name":'admin',
                 "avatar":"123"
