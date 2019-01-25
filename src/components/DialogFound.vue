@@ -1,24 +1,24 @@
 <template>
     <div class="logFund">
-         <el-dialog 
-            :title="dialog.title" 
+         <el-dialog
+            :title="dialog.title"
             :visible.sync="dialog.show"
             :close-on-click-modal='false'
             :close-on-press-escape='false'
             :modal-append-to-body="false">
             <div class="form">
-                <el-form 
-                    ref="form" 
+                <el-form
+                    ref="form"
                     :model="form"
                     :rules="form_rules"
-                    label-width="120px" 
+                    label-width="120px"
                     style="margin:10px;width:auto;">
 
                     <el-form-item label="收支类型:" >
                         <el-select v-model="form.type" placeholder="收支类型">
                             <el-option
                              v-for="(formtype, index) in format_type_list"
-                             :key="index" 
+                             :key="index"
                              :label="formtype" :value="formtype"
                             ></el-option>
                         </el-select>
@@ -91,17 +91,16 @@ export default {
       this.$refs[form].validate(valid => {
         if (valid) {
           //表单数据验证完成之后，提交数据;
-          const url =
-            this.dialog.option == "add" ? "add" : `edit/${this.form.id}`;
-          this.$axios.post(`/api/profile/${url}`, this.form).then(res => {
+          // const url = this.dialog.option == "add" ? "add" : `edit/${this.form.id}`;
+          // this.$axios.post(`/api/profile/${url}`, this.form).then(res => {
             // 操作成功
             this.$message({
               message: "保存成功！",
               type: "success"
             });
-            this.dialog.show = true;
+            this.dialog.show = false;
             this.$emit("update");
-          });
+          // });
         }
       });
     }

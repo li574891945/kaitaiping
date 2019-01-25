@@ -27,6 +27,7 @@
 
                 myChart.setOption({ // 进行相关配置
                     tooltip: {
+                        show:false,
                         trigger: 'item',
                         formatter: function loadData(result){//回调函数，参数params具体格式参加官方API
                             //鼠标放到某个地市上，显示这个地市的名称加人口数
@@ -37,7 +38,7 @@
                     },
 
                     visualMap: {
-                        show : true,
+                        show : false,
                         x: 'left',
                         y: 'center',
                         splitList: [

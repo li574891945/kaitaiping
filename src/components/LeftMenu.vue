@@ -1,110 +1,175 @@
 <template>
-    <el-row class="menu_page">
-         <el-col>
-             <el-menu
-                mode="vertical"
-                background-color="#324057"
-                text-color="#fff"
-                active-text-color="#409eff"
-                class="el-menu-vertical-demo">
-                <!--<router-link to="/home">-->
+
+        <el-row class="menu_page">
+            <el-col>
+                <el-menu
+                        mode="vertical"
+                        background-color="#324057"
+                        text-color="#fff"
+                        active-text-color="#409eff"
+                        class="el-menu-vertical-demo">
+                    <!--<router-link to="/home">-->
                     <!--<el-menu-item index="0">-->
-                        <!--<i class="fa fa-margin fa-server"></i>-->
-                        <!--<span slot="title">首页</span>-->
+                    <!--<i class="fa fa-margin fa-server"></i>-->
+                    <!--<span slot="title">首页</span>-->
                     <!--</el-menu-item>-->
-                <!--</router-link>-->
-                 <router-link to="/map">
-                     <el-menu-item index="0">
-                         <!--<i class="fa fa-margin fa-server"></i>-->
-                         <span slot="title">首页</span>
-                     </el-menu-item>
-                 </router-link>
-                 <!--<router-link to="/province">-->
-                     <!--<el-menu-item index="9">-->
-                         <!--&lt;!&ndash;<i class="fa fa-margin fa-server"></i>&ndash;&gt;-->
-                         <!--<span slot="title">省</span>-->
-                     <!--</el-menu-item>-->
-                 <!--</router-link>-->
-                 <router-link to="/city">
-                     <el-menu-item index="10">
-                         <!--<i class="fa fa-margin fa-server"></i>-->
-                         <span slot="title">市</span>
-                     </el-menu-item>
-                 </router-link>
-                <router-link to="/wagesAndAttendance">
-                    <el-menu-item index="1">
-                        <!--<i class="fa fa-margin fa-server"></i>-->
-                        <span slot="title">工人工资与考勤匹配情况</span>
-                    </el-menu-item>
-                </router-link>
-                <router-link to="/nativePlace">
-                    <el-menu-item index="2">
-                        <!--<i class="fa fa-margin fa-server"></i>-->
-                        <span slot="title">工人籍贯统计分析</span>
-                    </el-menu-item>
-                </router-link>
-                <router-link to="/age">
-                    <el-menu-item index="3">
-                        <!--<i class="fa fa-margin fa-server"></i>-->
-                        <span slot="title">工人年龄分析</span>
-                    </el-menu-item>
-                </router-link>
-                <router-link to="/output">
-                    <el-menu-item index="4">
-                        <!--<i class="fa fa-margin fa-server"></i>-->
-                        <span slot="title">进场人数与产值匹配度</span>
-                    </el-menu-item>
-                </router-link>
-                 <router-link to="/attendance">
-                     <el-menu-item index="5">
-                         <!--<i class="fa fa-margin fa-server"></i>-->
-                         <span slot="title">期间工人出勤率</span>
-                     </el-menu-item>
-                 </router-link>
-                 <router-link to="/wave">
-                     <el-menu-item index="6">
-                         <!--<i class="fa fa-margin fa-server"></i>-->
-                         <span slot="title">期间工人入场波动情况</span>
-                     </el-menu-item>
-                 </router-link>
-                 <router-link to="/foundlist">
-                     <el-menu-item index="7">
-                         <!--<i class="fa fa-margin fa-server"></i>-->
-                         <span slot="title">资金管理</span>
-                     </el-menu-item>
-                 </router-link>
-                 <router-link to="/infoshow">
-                     <el-menu-item index="8">
-                         <!--<i class="fa fa-margin fa-server"></i>-->
-                         <span slot="title">信息管理</span>
-                     </el-menu-item>
-                 </router-link>
+                    <!--</router-link>-->
+                    <router-link to="/map">
+                        <el-menu-item index="0">
+                            <!--<i class="fa fa-margin fa-server"></i>-->
+                            <span slot="title">首页</span>
+                        </el-menu-item>
+                    </router-link>
+                    <!--<router-link to="/province">-->
+                    <!--<el-menu-item index="9">-->
+                    <!--&lt;!&ndash;<i class="fa fa-margin fa-server"></i>&ndash;&gt;-->
+                    <!--<span slot="title">省</span>-->
+                    <!--</el-menu-item>-->
+                    <!--</router-link>-->
+                    <router-link to="/city">
+                        <el-menu-item index="10">
+                            <!--<i class="fa fa-margin fa-server"></i>-->
+                            <span slot="title">市</span>
+                        </el-menu-item>
+                    </router-link>
+                    <router-link to="/wagesAndAttendance">
+                        <el-menu-item index="1">
+                            <!--<i class="fa fa-margin fa-server"></i>-->
+                            <span slot="title">工人工资与考勤匹配情况</span>
+                        </el-menu-item>
+                    </router-link>
+                    <router-link to="/nativePlace">
+                        <el-menu-item index="2">
+                            <!--<i class="fa fa-margin fa-server"></i>-->
+                            <span slot="title">工人籍贯统计分析</span>
+                        </el-menu-item>
+                    </router-link>
+                    <router-link to="/age">
+                        <el-menu-item index="3">
+                            <!--<i class="fa fa-margin fa-server"></i>-->
+                            <span slot="title">工人年龄分析</span>
+                        </el-menu-item>
+                    </router-link>
+                    <router-link to="/output">
+                        <el-menu-item index="4">
+                            <!--<i class="fa fa-margin fa-server"></i>-->
+                            <span slot="title">进场人数与产值匹配度</span>
+                        </el-menu-item>
+                    </router-link>
+                    <router-link to="/attendance">
+                        <el-menu-item index="5">
+                            <!--<i class="fa fa-margin fa-server"></i>-->
+                            <span slot="title">期间工人出勤率</span>
+                        </el-menu-item>
+                    </router-link>
+                    <router-link to="/wave">
+                        <el-menu-item index="6">
+                            <!--<i class="fa fa-margin fa-server"></i>-->
+                            <span slot="title">期间工人入场波动情况</span>
+                        </el-menu-item>
+                    </router-link>
+                    <router-link to="/foundlist">
+                        <el-menu-item index="7">
+                            <!--<i class="fa fa-margin fa-server"></i>-->
+                            <span slot="title">资金管理</span>
+                        </el-menu-item>
+                    </router-link>
 
-                <template  v-for="item in items" >
-                    <el-submenu v-if="item.children" :index="item.path" :key="item.path">
-                        <template slot="title">
-                            <i :class="'fa fa-margin '+item.icon"></i>
-                            <span slot="title">{{item.name}}</span>
-                        </template>
-                        <router-link v-for="(citem,cindex) in item.children"
-                            :to="citem.path" :key="cindex">
-                            <el-menu-item
-                                :index='citem.path'>
-                                <span slot="title">{{citem.name}}</span>
-                            </el-menu-item>
-                        </router-link>
-                    </el-submenu>
+                    <el-menu-item index="8" @click="onEditMoney">
+                        <!--<i class="fa fa-margin fa-server"></i>-->
+                        <span slot="title" >信息管理</span>
+                    </el-menu-item>
 
-                </template>
-             </el-menu>
-         </el-col>
-    </el-row>
+
+                    <template  v-for="item in items" >
+                        <el-submenu v-if="item.children" :index="item.path" :key="item.path">
+                            <template slot="title">
+                                <i :class="'fa fa-margin '+item.icon"></i>
+                                <span slot="title">{{item.name}}</span>
+                            </template>
+                            <router-link v-for="(citem,cindex) in item.children"
+                                         :to="citem.path" :key="cindex">
+                                <el-menu-item
+                                        :index='citem.path'>
+                                    <span slot="title">{{citem.name}}</span>
+                                </el-menu-item>
+                            </router-link>
+                        </el-submenu>
+
+                    </template>
+                </el-menu>
+            </el-col>
+            <el-dialog
+                    title="个人信息"
+                    :visible.sync="dialog.show"
+                    :close-on-click-modal='false'
+                    :close-on-press-escape='false'
+                    :modal-append-to-body="false">
+                <div class="userinfo">
+                    <div class="user-item">
+                        <i class="fa fa-user"></i>
+                        <span>{{user.name}}</span>
+                    </div>
+                    <div  class="user-item">
+                        <el-form :model="ruleForm2" status-icon :rules="rules2" ref="ruleForm2" label-width="100px" class="demo-ruleForm">
+                            <el-form-item label="修改密码" prop="pass">
+                                <el-input type="password" v-model="ruleForm2.pass" autocomplete="off" style="width: 200px"></el-input>
+                            </el-form-item>
+                            <el-form-item label="确认密码" prop="checkPass">
+                                <el-input type="password" v-model="ruleForm2.checkPass" autocomplete="off" style="width: 200px"></el-input>
+                            </el-form-item>
+                            <el-form-item>
+                                <el-button type="primary" @click="submitForm('ruleForm2')">提交</el-button>
+                                <el-button @click="resetForm('ruleForm2')">重置</el-button>
+                            </el-form-item>
+                        </el-form>
+                    </div>
+                </div>
+            </el-dialog>
+        </el-row>
 </template>
 <script>
 export default {
   name: "leftmenu",
+
   data() {
+      var validatePass = (rule, value, callback) => {
+          if (value === '') {
+              callback(new Error('请输入密码'));
+          } else {
+              if (this.ruleForm2.checkPass !== '') {
+                  this.$refs.ruleForm2.validateField('checkPass');
+              }
+              callback();
+          }
+      };
+      var validatePass2 = (rule, value, callback) => {
+          if (value === '') {
+              callback(new Error('请再次输入密码'));
+          } else if (value !== this.ruleForm2.pass) {
+              callback(new Error('两次输入密码不一致!'));
+          } else {
+              callback();
+          }
+      };
     return {
+        ruleForm2: {
+            pass: '',
+            checkPass: '',
+            age: ''
+        },
+        rules2: {
+            pass: [
+                { validator: validatePass, trigger: 'blur' }
+            ],
+            checkPass: [
+                { validator: validatePass2, trigger: 'blur' }
+            ],
+        },
+        dialog: {
+            show: false,
+
+        },
       items: [
         // {
         //   icon: "fa-money",
@@ -126,7 +191,43 @@ export default {
         // }
       ]
     };
-  }
+  },
+
+    computed: {
+        user() {
+            return this.$store.getters.user;
+        }
+    },
+
+    methods: {
+        onEditMoney() {
+            // 编辑
+            this.dialog = {
+                show: true,
+
+            };
+        },
+        submitForm(formName) {
+            this.$refs[formName].validate((valid) => {
+                if (valid) {
+                    this.$message({
+                        message: "修改成功！",
+                        type: "success"
+                    });
+                    this.dialog = {
+                        show: false,
+
+                    };
+                } else {
+                    console.log('error submit!!');
+                    return false;
+                }
+            });
+        },
+        resetForm(formName) {
+            this.$refs[formName].resetFields();
+        }
+    }
 };
 </script>
 <style scoped>
@@ -162,4 +263,13 @@ export default {
 a {
   text-decoration: none;
 }
+.user-item {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+    .fa-user{
+        margin-right: 10px;
+        margin-left: 35px;
+    }
 </style>

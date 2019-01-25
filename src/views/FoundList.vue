@@ -123,11 +123,11 @@
                     fixed="right"
                     width="380">
                     <template slot-scope='scope'>
-                        <span  class="btns bg-799EFF"  @click='onEditMoney(scope.row)' >认证通过</span>
-                        <span class="btns bg-409EFF"  @click='onDeleteMoney(scope.row,scope.$index)' >修改</span>
+                        <span  class="btns bg-799EFF"  @click='onSuss(scope.row)' >认证通过</span>
+                        <span class="btns bg-409EFF"  @click='onEditMoney(scope.row,scope.$index)' >修改</span>
                         <span class="btns bg-F56C6C"   @click='onDeleteMoney(scope.row,scope.$index)' >删除</span>
-                        <span  class="btns bg-409EFF"   @click='onDeleteMoney(scope.row,scope.$index)' >检查点</span>
-                        <span  class="btns bg-67C23A"   @click='onDeleteMoney(scope.row,scope.$index)' >班组信息</span>
+                        <span  class="btns bg-409EFF"    >检查点</span>
+                        <span  class="btns bg-67C23A"    >班组信息</span>
                     </template>
                 </el-table-column>
             </el-table>
@@ -327,13 +327,32 @@ export default {
         id: row._id
       };
     },
-    // onDeleteMoney(row, index) {
-    //   // 删除
-    //   this.$axios.delete(`/api/profile/delete/${row._id}`).then(res => {
-    //     this.$message("删除成功");
-    //     this.getProfile();
-    //   });
-    // },
+    onDeleteMoney(row, index) {
+      // 删除
+      // this.$axios.delete(`/api/profile/delete/${row._id}`).then(res => {
+        this.$confirm('确认删除?', '提示', {
+            confirmButtonText: '确定',
+            cancelButtonText: '取消',
+            type: 'warning'
+        }).then(() => {
+            this.$message({
+                type: 'success',
+                message: '删除成功!'
+            });
+        }).catch(() => {
+            this.$message({
+                type: 'info',
+                message: '已取消删除'
+            });
+        });
+      // });
+    },
+      onSuss(){
+          this.$message({
+              type: 'success',
+              message: '认证成功!'
+          });
+      },
     onAddMoney() {
       // 添加
       this.dialog = {
