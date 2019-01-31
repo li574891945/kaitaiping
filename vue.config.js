@@ -5,7 +5,7 @@ const url = 'http://192.168.40.1:8081';
 
 module.exports = {
     publicPath: process.env.NODE_ENV === 'production'
-        ? '/kaitaiping/dist/'
+        ? './'
         : '/',
     outputDir: 'dist', // 构建输出目录
     assetsDir: 'assets', // 静态资源目录 (data, css, img, fonts)
@@ -52,7 +52,7 @@ module.exports = {
                 ws: true,
                 changOrigin: true,
                 pathRewrite: {
-                    '^/api': ''
+                    '^/': ''
                 }
             }
         },

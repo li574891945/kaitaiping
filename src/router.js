@@ -21,8 +21,8 @@ import City from './views/map/city'
 Vue.use(Router)
 
 const router = new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
+  // mode: 'history',
+  // base: process.env.BASE_URL,
   routes: [
     { path: '*', name: '/404', component: Nofind },
     { path: '/', redirect: '/index' },
@@ -33,7 +33,7 @@ const router = new Router({
       name: 'index',
       component: Index,
       children: [
-        { path: '', component: Map },
+        { path: '', name: 'map', component: Map },
         { path: '/map', name: 'map', component: Map },
         { path: '/infoshow', name: 'infoshow', component: InfoShow },
         { path: '/foundlist', name: 'foundlist', component: FoundList },
@@ -66,6 +66,40 @@ router.beforeEach((to, from, next) => {
   if (to.path == "/login" || to.path == "/register") {
     next();
   } else {
+    switch(to.name){
+      case "map":
+        // this.$store.dispatch("setNavmenuIndex", '0');
+        localStorage.setItem("setNavmenuIndex", '0');
+        break;
+      case "city":
+        // this.$store.dispatch("setNavmenuIndex", '10');
+        localStorage.setItem("setNavmenuIndex", '10');
+        break;
+      case "output":
+        // this.$store.dispatch("setNavmenuIndex", '4');
+        localStorage.setItem("setNavmenuIndex", '4');
+        break;
+      case "wave":
+        // this.$store.dispatch("setNavmenuIndex", '6');
+        localStorage.setItem("setNavmenuIndex", '6');
+        break;
+      case "attendance":
+        // this.$store.dispatch("setNavmenuIndex", '5');
+        localStorage.setItem("setNavmenuIndex", '5');
+        break;
+      case "wagesAndAttendance":
+        // this.$store.dispatch("setNavmenuIndex", '1');
+        localStorage.setItem("setNavmenuIndex", '1');
+        break;
+      case "nativePlace":
+        // this.$store.dispatch("setNavmenuIndex", '2');
+        localStorage.setItem("setNavmenuIndex", '2');
+        break;
+      case "age":
+        // this.$store.dispatch("setNavmenuIndex", '3');
+        localStorage.setItem("setNavmenuIndex", '3');
+        break;
+    }
     isLogin ? next() : next("/login");
   }
 })

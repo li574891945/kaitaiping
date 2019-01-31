@@ -30,7 +30,7 @@ export default {
   data() {
     return {
       loginUser: {
-        email: "",
+        email: "admin",
         password: ""
       },
       rules: {
