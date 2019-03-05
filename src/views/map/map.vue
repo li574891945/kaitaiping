@@ -19,20 +19,50 @@
             console.log(jiangmeng)
         },
         methods:{
+            jump(id){
+                // this.$router.push({
+                //     path: this.$router.$avueRouter.getPath({
+                //         name: "项目信息",
+                //         src: 'http://120.76.60.230:8081/JMBBackend/BEProject/Detail?id='+id
+                //     })
+                // });
+                window.location.href='http://120.76.60.230:8081/JMBBackend/BEProject/Detail?id='+id;
+
+            },
             chinaConfigure() {
                 // console.log(this.userJson)
+                let _this = this;
                 let myChart = echarts.init(this.$refs.myEchartMap); //这里是为了获得容器所在位置
                 // window.onresize = myChart.resize;
                 echarts.registerMap('江门市', jiangmeng);
+                myChart.on('click', function(params){
+                    console.log(params);//此处写点击事件内容
+                    if(params.componentType == "series"){
+                        _this.jump(params.data.id)
+                    }
+                });
                 let myData = [
-                    {name: '工地1', value: [113.075531,21.576212]},
-                    {name: '工地2', value: [113.781327, 22.1 ,  ]},
-                    {name: '工地3', value: [114.781327, 25,  ]},
-                    {name: '工地4', value: [114.781327, 24 ,  ]},
-                    {name: '工地5', value: [113.1, 22.6 ,  ]},
-                    {name: '工地6', value: [113.781327, 23.5 ,  ]},
-                    {name: '工地7', value: [113.781327, 22.9 ,  ]},
-                    {name: '工地8', value: [113.781327, 27 ,  ]},
+                    {adds: '嘉瀚花园施工总承包工程', value: [113.109935,22.574098],name:'江海区',id:'66'},
+                    {adds: '灏昌园A、B、C、D幢高层住宅、B地块半地下层和地下一层（车库）', value: [113.081549,22.648888],name:'蓬江区',id:'49'},
+                    {adds: '台山市保利公馆二期', value: [112.80191,22.253883],name:'台山市',id:'55'},
+                    {adds: '轩汇豪庭住宅小区三期（3.2期）', value: [112.686147,22.391695],name:'开平市',id:'54'},
+                    {adds: '江门市世纪城旧城改造项目-华鑫阁1幢及商业1', value: [113.093095,22.589503],name:'蓬江区',id:'52'},
+                    {adds: '江门市海逸峰璟花园', value: [113.084245,22.588248],name:'蓬江区',id:'51'},
+                    {adds: '荷塘镇高村农贸市场建设工程', value: [113.103518,22.6342],name:'蓬江区',id:'50'},
+                    {adds: '富港-天荟湾', value: [113.101515,22.575431],name:'江海区',id:'48'},
+                    {adds: '江海怡景湾小区地块二三栋住宅', value: [113.10669,22.561881],name:'江海区',id:'46'},
+                    {adds: '胜坚紫悦花园10#集中商业', value: [113.076805,22.59776],name:'蓬江区',id:'45'},
+                    {adds: '厂房二', value: [112.879936,22.585644],name:'鹤山市',id:'44'},
+                    {adds: '台山海骏达花园十三区', value: [112.808496,22.202312],name:'台上市',id:'40'},
+                    {adds: '永信大厦', value: [113.074123,22.625634],name:'蓬江区',id:'37'},
+                    {adds: '江门中医药学院项目', value: [113.064746,22.574765],name:'蓬江区',id:'26'},
+                    {adds: '名城上都商住楼', value: [113.039324,22.48373],name:'新会区',id:'21'},
+                    {adds: '广东江门幼儿师范高等专科学校新校区建设工程(一期)', value: [113.079413,22.579421],name:'蓬江区',id:'1'},
+                    {adds: '一鹿彤行', value: [112.639247,22.620072],name:'鹤山市',id:'5'},
+                    {adds: '1#、2#仓库（吴剑中、陆卫和、李庆彬）', value: [113.137288,22.648302],name:'蓬江区',id:'38'},
+                    {adds: '鹤山市沙坪松鹤新城(南区)E4、E5、E6座；E7、E8、E9座；商业裙楼、停车库', value: [112.986745,22.785584],name:'鹤山市',id:'41'},
+                    {adds: '1#厂房（刘运英）', value: [113.142948,22.659089],name:'蓬江区',id:'39'},
+
                 ]
                 myChart.setOption({ // 进行相关配置
                     tooltip: {
@@ -41,12 +71,18 @@
                             //鼠标放到某个地市上，显示这个地市的名称加人口数
                             //例如 params.name：当前地市名称。params.value：你传入的json数据与当前地市匹配的一项。
                             //params.data.value:你传入的json数据与当前地市匹配的一项中'value'对应的数据
-                            return result.name+'<br />数据:'+result.value;
+                            // console.log(result.data)
+                            if (result.data.adds){
+                                return result.data.adds + '<br /> ' +  result.data.name ;
+                            }else {
+                                return result.data.name + '<br /> ' +  result.data.value;
+                            }
+
                         },
                     },
                     geo: {
-                        map: '广东',//地图类型为中国地图,要是世界那就是world,要是省市区：例如beijing、shanghai
-                        show:false,
+                        map: '江门市',//地图类型为中国地图,要是世界那就是world,要是省市区：例如beijing、shanghai
+                        show:true,
                     },
                     visualMap: {
                         show : true,
@@ -82,7 +118,7 @@
                                     show: true
                                 },
                                 emphasis: {
-                                    show: true
+                                    show: false
                                 }
                             },
                             data : [

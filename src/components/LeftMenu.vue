@@ -40,12 +40,12 @@
                             <span slot="title">项目对接</span>
                         </el-menu-item>
                     </router-link>
-                    <router-link to="/output">
-                        <el-menu-item index="4">
-                            <!--<i class="fa fa-margin fa-server"></i>-->
-                            <span slot="title">进场人数</span>
-                        </el-menu-item>
-                    </router-link>
+                    <!--<router-link to="/output">-->
+                        <!--<el-menu-item index="4">-->
+                            <!--&lt;!&ndash;<i class="fa fa-margin fa-server"></i>&ndash;&gt;-->
+                            <!--<span slot="title">进场人数</span>-->
+                        <!--</el-menu-item>-->
+                    <!--</router-link>-->
                     <router-link to="/wave">
                         <el-menu-item index="6">
                             <!--<i class="fa fa-margin fa-server"></i>-->
