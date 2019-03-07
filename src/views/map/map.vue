@@ -75,7 +75,7 @@
                             if (result.data.adds){
                                 return result.data.adds + '<br /> ' +  result.data.name ;
                             }else {
-                                return result.data.name + '<br /> ' +  result.data.value;
+                                return result.data.name + '<br /> ' +  result.data.value + "个";
                             }
 
                         },
@@ -89,8 +89,8 @@
                         x: 'left',
                         y: 'center',
                         splitList: [
-                            {start: 10, end:100, label: '地标'},{start: 2, end: 3,label: '2 - 3（个）'},
-                            {start: 1, end: 2,label: '1 - 2（个）'},{start: 0, end:0,label: '0（个）'},
+                            {start: 20, end:100, label: '地标'},{start: 6, end: 10,label: '6 - 10（个）'},
+                            {start: 1, end: 5,label: '1 - 5（个）'},{start: 0, end:0,label: '0（个）'},
                         ],
                         color: ['#F62157', '#9feaa5', '#85daef','#74e2ca', '#e6ac53', '#9fb5ea']
                     },
@@ -122,13 +122,13 @@
                                 }
                             },
                             data : [
-                                {name:'恩平市',value:'2'},
-                                {name:'开平市',value:'3'},
-                                {name:'鹤山市',value:'0'},
-                                {name:'蓬江区',value:'1'},
-                                {name:'江海区',value:'3'},
-                                {name:'新会区',value:'2'},
-                                {name:'台山市',value:'0'},
+                                {name:'恩平市',value:'0'},
+                                {name:'开平市',value:'1'},
+                                {name:'鹤山市',value:'3'},
+                                {name:'蓬江区',value:'10'},
+                                {name:'江海区',value:'2'},
+                                {name:'新会区',value:'1'},
+                                {name:'台山市',value:'2'},
                             ]//dataParam//人口数据：例如[{name:'济南',value:'100万'},{name:'菏泽'，value:'100万'}......]
                         }
                     ]

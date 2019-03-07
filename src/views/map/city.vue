@@ -38,7 +38,7 @@
                     },
 
                     visualMap: {
-                        show : false,
+                        show : true,
                         x: 'left',
                         y: 'center',
                         splitList: [

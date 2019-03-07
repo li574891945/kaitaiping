@@ -2,7 +2,7 @@
     <div>
         <div class="main">
             <span>
-                <span class="tit">条件</span>
+                <span class="tit">类型</span>
                 <el-select v-model="value4" clearable placeholder="请选择">
                     <el-option
                             v-for="item in options"
@@ -11,6 +11,7 @@
                             :value="item.value">
                     </el-option>
                 </el-select>
+                  <span class="tit">名称</span>
             </span>
             <el-input style="width: 200px;margin-left: 20px" v-model="input" placeholder="请输入内容"></el-input>
             <el-button style="margin-left: 10px" type="primary" icon="el-icon-search" @click="lineConfigure(value4)" circle ></el-button>
@@ -26,16 +27,16 @@
             return {
                 options: [{
                     value: '0',
-                    label: '项目名称'
+                    label: '项目'
                 }, {
                     value: '1',
-                    label: '区域名称'
+                    label: '区域'
                 }, {
                     value: '2',
-                    label: '总包名称'
+                    label: '总包'
                 }, {
                     value: '3',
-                    label: '工人名称'
+                    label: '工人'
                 }],
                 value4: '1',
                 input: '',
